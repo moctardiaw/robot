@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221005 15:27:57.250" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="c:\Users\ib\Desktop\myrobot\tests">
+<suite id="s1-s1" name="Test01" source="c:\Users\ib\Desktop\myrobot\tests\test01.robot">
+<test id="s1-s1-t1" name="Scenario 1 : Recherche la premiere moutarde sur carrefour" line="9">
+<kw name="Recherche la premiere moutarde sur carrefour" library="HomePage">
+<arg>${Host}</arg>
+<arg>${Navigateur}</arg>
+<arg>${dataset_keyWord}</arg>
+<kw name="Navigate on url" library="HomePage">
+<arg>${Navigateur}</arg>
+<kw name="navigate" library="init">
+<arg>${Navigateur}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Host}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221005 15:27:57.517" level="INFO">Opening browser 'chrome' to base url 'https:/carrefour.fr/'.</msg>
+<status status="PASS" starttime="20221005 15:27:57.517" endtime="20221005 15:28:01.352"/>
+</kw>
+<status status="PASS" starttime="20221005 15:27:57.517" endtime="20221005 15:28:01.352"/>
+</kw>
+<status status="PASS" starttime="20221005 15:27:57.516" endtime="20221005 15:28:01.352"/>
+</kw>
+<kw name="Accept cookie" library="MainPage">
+<arg>${locator-cookie}</arg>
+<arg>${locator-accept-cookie}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-cookie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:01.353" endtime="20221005 15:28:01.601"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-accept-cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:01.601" level="INFO">Clicking element 'onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20221005 15:28:01.601" endtime="20221005 15:28:01.719"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:01.353" endtime="20221005 15:28:01.719"/>
+</kw>
+<kw name="SearchBar by keyword" library="HomePage">
+<arg>${locator-searchbar}</arg>
+<arg>${dataset_keyWord}</arg>
+<arg>${locator-button-searchbar}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator-searchbar}</arg>
+<arg>${dataset_keyWord}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:01.721" level="INFO">Typing text 'Moutarde' into text field 'xpath://*[@id="search-bar"]/form/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20221005 15:28:01.721" endtime="20221005 15:28:02.920"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-button-searchbar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:02.920" endtime="20221005 15:28:02.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-button-searchbar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:02.947" level="INFO">Clicking element 'css:#search-bar &gt; form &gt; div &gt; div.pl-input-text-group__append &gt; button'.</msg>
+<status status="PASS" starttime="20221005 15:28:02.946" endtime="20221005 15:28:06.565"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:01.719" endtime="20221005 15:28:06.565"/>
+</kw>
+<status status="PASS" starttime="20221005 15:27:57.516" endtime="20221005 15:28:06.565"/>
+</kw>
+<status status="PASS" starttime="20221005 15:27:57.515" endtime="20221005 15:28:06.566"/>
+</test>
+<test id="s1-s1-t2" name="Scenario 2 : Recherche la premiere moutarde sur carrefour en detail implementation (sequence)" line="11">
+<kw name="Navigate on url" library="HomePage">
+<arg>${Navigateur}</arg>
+<kw name="navigate" library="init">
+<arg>${Navigateur}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Host}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221005 15:28:06.569" level="INFO">Opening browser 'chrome' to base url 'https:/carrefour.fr/'.</msg>
+<status status="PASS" starttime="20221005 15:28:06.569" endtime="20221005 15:28:11.418"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:06.569" endtime="20221005 15:28:11.419"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:06.568" endtime="20221005 15:28:11.419"/>
+</kw>
+<kw name="Accept cookie" library="MainPage">
+<arg>${locator-cookie}</arg>
+<arg>${locator-accept-cookie}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-cookie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:11.420" endtime="20221005 15:28:11.457"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-accept-cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:11.458" level="INFO">Clicking element 'onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20221005 15:28:11.458" endtime="20221005 15:28:11.584"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:11.419" endtime="20221005 15:28:11.584"/>
+</kw>
+<kw name="SearchBar by keyword" library="HomePage">
+<arg>${locator-searchbar}</arg>
+<arg>${dataset_keyWord}</arg>
+<arg>${locator-button-searchbar}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator-searchbar}</arg>
+<arg>${dataset_keyWord}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:11.587" level="INFO">Typing text 'Moutarde' into text field 'xpath://*[@id="search-bar"]/form/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20221005 15:28:11.586" endtime="20221005 15:28:12.681"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-button-searchbar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:12.681" endtime="20221005 15:28:12.800"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-button-searchbar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:12.801" level="INFO">Clicking element 'css:#search-bar &gt; form &gt; div &gt; div.pl-input-text-group__append &gt; button'.</msg>
+<status status="PASS" starttime="20221005 15:28:12.800" endtime="20221005 15:28:17.302"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:11.585" endtime="20221005 15:28:17.303"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:06.567" endtime="20221005 15:28:17.303"/>
+</test>
+<doc>Scenari des tests de recherche sur l'application carrefour :</doc>
+<status status="PASS" starttime="20221005 15:27:57.279" endtime="20221005 15:28:17.305"/>
+</suite>
+<suite id="s1-s2" name="Test02" source="c:\Users\ib\Desktop\myrobot\tests\test02.robot">
+<test id="s1-s2-t1" name="Scenario 1 : Login sur carrefour" line="10">
+<kw name="Login" library="LoginPage">
+<arg>${user}</arg>
+<arg>${pwd}</arg>
+<kw name="GotoUrl" library="MainPage">
+<arg>${browser}</arg>
+<kw name="navigate" library="init">
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Host}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221005 15:28:17.333" level="INFO">Opening browser 'Chrome' to base url 'https:/carrefour.fr/'.</msg>
+<status status="PASS" starttime="20221005 15:28:17.332" endtime="20221005 15:28:20.588"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:17.331" endtime="20221005 15:28:20.589"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221005 15:28:20.589" endtime="20221005 15:28:20.811"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:17.330" endtime="20221005 15:28:20.811"/>
+</kw>
+<kw name="Accept cookie" library="MainPage">
+<arg>${cookie}</arg>
+<arg>${accept-cookie}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-cookie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:20.812" endtime="20221005 15:28:21.078"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-accept-cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:21.079" level="INFO">Clicking element 'onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20221005 15:28:21.078" endtime="20221005 15:28:21.221"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:20.811" endtime="20221005 15:28:21.222"/>
+</kw>
+<kw name="Click compte" library="LoginPage">
+<arg>${locator-compte}</arg>
+<arg>${locator-compte}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-compte}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:21.223" endtime="20221005 15:28:21.681"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-compte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:21.682" level="INFO">Clicking element 'xpath://*[@id="data-account"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:21.681" endtime="20221005 15:28:22.838"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:21.222" endtime="20221005 15:28:22.839"/>
+</kw>
+<kw name="Click me connecter" library="LoginPage">
+<arg>${locator-meconnecter}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-meconnecter}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:22.840" endtime="20221005 15:28:23.249"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${locator-meconnecter}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:23.250" level="INFO">Clicking link 'xpath://*[@id="headerAccountPanel"]/div/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20221005 15:28:23.249" endtime="20221005 15:28:23.854"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:22.839" endtime="20221005 15:28:23.854"/>
+</kw>
+<kw name="Enter Username" library="LoginPage">
+<arg>${locator-user}</arg>
+<arg>${user}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-user}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:23.855" endtime="20221005 15:28:24.395"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator-user}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:24.396" level="INFO">Typing text 'toto.designer@yopmail.com' into text field 'xpath://*[@id="idToken1"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:24.395" endtime="20221005 15:28:24.615"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:23.855" endtime="20221005 15:28:24.615"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${locator-pass}</arg>
+<arg>${pwd}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-pass}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:24.616" endtime="20221005 15:28:24.642"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator-pass}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:24.643" level="INFO">Typing text 'Toto@2022' into text field 'xpath://*[@id="idToken2"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:24.642" endtime="20221005 15:28:25.300"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:24.615" endtime="20221005 15:28:25.301"/>
+</kw>
+<kw name="Click Submit" library="LoginPage">
+<arg>${locator-submit}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-submit}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:25.302" endtime="20221005 15:28:25.326"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:25.327" level="INFO">Clicking element 'xpath://*[@id="loginButton_0"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:25.326" endtime="20221005 15:28:25.385"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:25.301" endtime="20221005 15:28:25.386"/>
+</kw>
+<kw name="Verify Page Contain" library="LoginPage">
+<arg>${locator-account}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-account}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:25.387" endtime="20221005 15:28:29.694"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator-account}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221005 15:28:29.706" level="INFO">Current page contains element '//*[@id="data-account"]/span[2]/span'.</msg>
+<status status="PASS" starttime="20221005 15:28:29.695" endtime="20221005 15:28:29.707"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:25.386" endtime="20221005 15:28:29.708"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221005 15:28:29.708" endtime="20221005 15:28:36.212"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:17.329" endtime="20221005 15:28:36.213"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:17.328" endtime="20221005 15:28:36.213"/>
+</test>
+<test id="s1-s2-t2" name="Scenario 2 : Login en detail sur carrefour" line="12">
+<kw name="GotoUrl" library="MainPage">
+<arg>${browser}</arg>
+<kw name="navigate" library="init">
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Host}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221005 15:28:36.217" level="INFO">Opening browser 'Chrome' to base url 'https:/carrefour.fr/'.</msg>
+<status status="PASS" starttime="20221005 15:28:36.216" endtime="20221005 15:28:40.315"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:36.216" endtime="20221005 15:28:40.316"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221005 15:28:40.316" endtime="20221005 15:28:40.475"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:36.216" endtime="20221005 15:28:40.475"/>
+</kw>
+<kw name="Accept cookie" library="MainPage">
+<arg>${cookie}</arg>
+<arg>${accept-cookie}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-cookie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:40.480" endtime="20221005 15:28:40.540"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-accept-cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:40.540" level="INFO">Clicking element 'onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20221005 15:28:40.540" endtime="20221005 15:28:40.664"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:40.479" endtime="20221005 15:28:40.665"/>
+</kw>
+<kw name="Click compte" library="LoginPage">
+<arg>${locator-compte}</arg>
+<arg>${locator-compte}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-compte}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:40.666" endtime="20221005 15:28:41.038"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-compte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:41.039" level="INFO">Clicking element 'xpath://*[@id="data-account"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:41.039" endtime="20221005 15:28:41.962"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:40.665" endtime="20221005 15:28:41.962"/>
+</kw>
+<kw name="Click me connecter" library="LoginPage">
+<arg>${locator-meconnecter}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-meconnecter}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:41.964" endtime="20221005 15:28:42.217"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${locator-meconnecter}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:42.218" level="INFO">Clicking link 'xpath://*[@id="headerAccountPanel"]/div/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20221005 15:28:42.217" endtime="20221005 15:28:43.472"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:41.963" endtime="20221005 15:28:43.472"/>
+</kw>
+<kw name="Enter Username" library="LoginPage">
+<arg>${locator-user}</arg>
+<arg>${user}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-user}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:43.473" endtime="20221005 15:28:44.018"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator-user}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:44.019" level="INFO">Typing text 'toto.designer@yopmail.com' into text field 'xpath://*[@id="idToken1"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:44.018" endtime="20221005 15:28:44.240"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:43.472" endtime="20221005 15:28:44.240"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${locator-pass}</arg>
+<arg>${pwd}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-pass}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:44.242" endtime="20221005 15:28:44.269"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator-pass}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:44.270" level="INFO">Typing text 'Toto@2022' into text field 'xpath://*[@id="idToken2"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:44.269" endtime="20221005 15:28:44.788"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:44.241" endtime="20221005 15:28:44.789"/>
+</kw>
+<kw name="Click Submit" library="LoginPage">
+<arg>${locator-submit}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-submit}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:44.790" endtime="20221005 15:28:44.811"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator-submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 15:28:44.812" level="INFO">Clicking element 'xpath://*[@id="loginButton_0"]'.</msg>
+<status status="PASS" starttime="20221005 15:28:44.811" endtime="20221005 15:28:44.863"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:44.789" endtime="20221005 15:28:44.864"/>
+</kw>
+<kw name="Verify Page Contain" library="LoginPage">
+<arg>${locator-account}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator-account}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 15:28:44.865" endtime="20221005 15:28:48.897"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator-account}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221005 15:28:49.039" level="INFO">Current page contains element '//*[@id="data-account"]/span[2]/span'.</msg>
+<status status="PASS" starttime="20221005 15:28:48.897" endtime="20221005 15:28:49.039"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:44.864" endtime="20221005 15:28:49.040"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221005 15:28:49.041" endtime="20221005 15:28:51.257"/>
+</kw>
+<status status="PASS" starttime="20221005 15:28:36.215" endtime="20221005 15:28:51.260"/>
+</test>
+<doc>Scenari des tests de login sur l'application carrefour :</doc>
+<status status="PASS" starttime="20221005 15:28:17.308" endtime="20221005 15:28:51.267"/>
+</suite>
+<status status="PASS" starttime="20221005 15:27:57.255" endtime="20221005 15:28:51.276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test01">Tests.Test01</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="Test02">Tests.Test02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221005 13:58:34.994" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\ib\.vscode\extensions\robocorp.robotframework-lsp-1.2.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Login">
+<arg>${user}</arg>
+<arg>${pwd}</arg>
+<msg timestamp="20221005 13:58:35.972" level="FAIL">No keyword with name 'Login' found. Did you mean:
+    BuiltIn.Log
+    BuiltIn.Log Many</msg>
+<status status="FAIL" starttime="20221005 13:58:35.971" endtime="20221005 13:58:35.972"/>
+</kw>
+<status status="PASS" starttime="20221005 13:58:35.019" endtime="20221005 13:58:49.966"/>
+</kw>
+<status status="PASS" starttime="20221005 13:58:35.018" endtime="20221005 13:58:49.966"/>
+</test>
+<status status="PASS" starttime="20221005 13:58:34.996" endtime="20221005 13:58:49.967"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
