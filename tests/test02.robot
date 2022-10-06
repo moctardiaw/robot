@@ -9,9 +9,10 @@ Variables   ../PythonFunctions/login.py
 *** Test Cases ***
 Scenario 1 : Login sur carrefour  
             Login  ${user}  ${pwd}
+            Close All Browsers
 Scenario 2 : Login en detail sur carrefour
             GotoUrl   ${browser}    
-            Accept cookie    ${cookie}    ${accept-cookie}
+            Accept cookie    ${accept-cookie}
             Click compte  ${locator-compte}   ${locator-compte}
             Click me connecter   ${locator-meconnecter}
             Enter Username    ${locator-user}    ${user}

@@ -7,7 +7,6 @@ Resource  MainPage.robot
 
 *** Variables ***
 ${locator-compte}   xpath://*[@id="data-account"]
-${cookie}  onetrust-accept-btn-handler
 ${accept-cookie}  onetrust-accept-btn-handler
 ${locator-meconnecter}   xpath://*[@id="headerAccountPanel"]/div/div/ul/li[1]/a
 ${locator-user}    xpath://*[@id="idToken1"]
@@ -20,7 +19,7 @@ Login
       [Arguments]  ${user}  ${pwd}
 
     GotoUrl   ${browser}    
-    Accept cookie    ${cookie}    ${accept-cookie}
+    Accept cookie   ${accept-cookie}
     Click compte  ${locator-compte}   ${locator-compte}
     Click me connecter   ${locator-meconnecter}
     Enter Username    ${locator-user}    ${user}

@@ -13,6 +13,6 @@ GotoUrl
     Maximize Browser Window
 
 Accept cookie
-     [Arguments]  ${locator-cookie}  ${locator-accept-cookie}
-    Wait Until Element Is Visible  ${locator-cookie} 
+     [Arguments]  ${locator-accept-cookie}
+    Wait Until Element Is Visible  ${locator-accept-cookie}
     Click Element   ${locator-accept-cookie}
